@@ -1,6 +1,6 @@
 const {cache} = require('../config/defaultConfig');
 
-function refreshRes(stats, res) {
+function refreshRes(stats, res) { 
   const {maxAge, expires, cacheControl, lastModified, etag} = cache;
 
   if (expires) {
@@ -22,7 +22,7 @@ function refreshRes(stats, res) {
 
 module.exports = function isFresh(stats, req, res) {
   refreshRes(stats, res);
-
+  
   const lastModified = req.headers['if-modified-since'];
   const etag = req.headers['if-none-match'];
 

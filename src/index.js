@@ -1,8 +1,6 @@
 const yargs = require('yargs');
 const Server = require('./app');
 
-console.log();
-
 const argv = yargs
   .usage('anywhere [options]')
   .option('p', {
